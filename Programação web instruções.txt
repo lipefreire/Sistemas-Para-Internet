@@ -1,0 +1,7 @@
+Baixar - apache Tomcat
+Baixar - Eclipse IDE for enterprise java web developers
+
+
+Criar o servidor no eclipse com o Tomcat 9.0
+File/new/dynamic web project
+JRE 17.0
