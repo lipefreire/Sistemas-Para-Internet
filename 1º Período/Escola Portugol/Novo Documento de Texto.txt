@@ -1,0 +1,12 @@
+                inteiro num = 100
+		real valor = 7.5
+		caracter letra = 'g'
+		cadeia frase = "Boa tarde, pessoal!"
+		logico achou = falso 
+
+
+		real temperatura = 37.5
+		real total = 5.25
+		inteiro idade = 28
+		cadeia nome = "Fulano de Tal"
+		caracter simbolo = '('
