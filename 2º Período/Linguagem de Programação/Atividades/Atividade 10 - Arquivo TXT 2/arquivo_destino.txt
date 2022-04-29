@@ -1,0 +1,3 @@
+Media dos numeros lidos : 815.3448275862069
+Quantidade de numeros impares: 7
+Quantidade de numeros pares : 22
