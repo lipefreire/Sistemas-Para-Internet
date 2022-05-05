@@ -1,0 +1,14 @@
+#botao {
+    /* Cor interior do botão */
+    background-color: red !important;
+
+    /* Cor da borda ao redor do botão */
+    border-color: red;
+    
+    /* Cor da fonte dentro do botão */
+    color: black;
+}
+
+#menu{
+    background-color: gray !important;
+}

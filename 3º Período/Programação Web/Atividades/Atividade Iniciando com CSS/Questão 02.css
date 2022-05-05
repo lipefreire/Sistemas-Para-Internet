@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lightslategrey;
+    padding-left: 150px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas: "header header"
+                        "main aside"
+                        "footer footer";
+    width: 700px;
+}
+
+header {
+    background: grey;
+    grid-area: header;
+}
+
+main {
+    background: red;
+    grid-area: main;
+}
+
+aside {
+    background: green;
+    grid-area: aside;
+}
+
+footer {
+    background: white;
+    grid-area: footer;
+}
