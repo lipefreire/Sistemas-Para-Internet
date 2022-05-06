@@ -8,8 +8,10 @@ Walter José - Desenvolvimento Back-End
 Daniel - Layout
 Vinicius Duperron - Layout
 
-Funcionalidades -
-Login via conta do google ou facebook
+Funcionalidades do aplicativo -
+Login via conta do Google ou Facebook
 Cadastro de usuários / perfil
-Agendar lavagem
+Cadastro de lava jato / perfil
+Agendamento
 Descrição para exceções
+Compra dos planos
