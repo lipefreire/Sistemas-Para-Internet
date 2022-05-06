@@ -3,10 +3,10 @@ Aplicativo para "Lava Jato"
 
 Componentes e funções - 
 Felipe Freire - Documentação
-José Rafael - Desenvolvedor Front-End
-Walter José - Desenvolvimento Back-End
 Daniel - Layout
 Vinicius Duperron - Layout
+José Rafael - Desenvolvedor Front-End
+Walter José - Desenvolvedor Back-End
 
 Funcionalidades do aplicativo -
 Login via conta do Google ou Facebook
@@ -14,6 +14,7 @@ Cadastro de usuários / perfil
 Cadastro de lava jato / perfil
 Agendamento
   . Consulta dos horários disponíveis
+  . Consultar as opções disponíveis de lavagem
 Descrição para exceções
-  . Observações sobre a lavagem (Não utilizar determinado produto que seja prejudicial para o automóvel)
+  . Observações sobre a lavagem (Exemplo: Não utilizar determinado produto que seja prejudicial para o automóvel.)
 Compra dos planos
