@@ -10,8 +10,8 @@ Walter José - Desenvolvedor Back-End
 
 Funcionalidades do aplicativo -
 Login via conta do Google ou Facebook
-Cadastro de usuários / perfil
-Cadastro de lava jato / perfil
+Cadastro de usuários / perfil pessoal
+Cadastro de lava jato / empresa
 Listagem dos lava jatos
   . Cadastrados
   . Ativos 
