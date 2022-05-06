@@ -1,0 +1,15 @@
+Documentação - Projeto Integrador 4
+Aplicativo para "Lava Jato"
+
+Componentes e funções - 
+Felipe Freire - Documentação
+José Rafael - Desenvolvedor Front-End
+Walter José - Desenvolvimento Back-End
+Daniel - Layout
+Vinicius Duperron - Layout
+
+Funcionalidades -
+Login via conta do google ou facebook
+Cadastro de usuários / perfil
+Agendar lavagem
+Descrição para exceções
