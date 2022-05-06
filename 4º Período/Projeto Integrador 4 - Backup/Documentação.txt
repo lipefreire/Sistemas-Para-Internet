@@ -21,8 +21,11 @@ Agendamento
 Descrição para exceções
   . Observações sobre a lavagem (Exemplo: Não utilizar determinado produto que seja prejudicial para o automóvel.)
 Compra dos planos
-Adicionar cartão fidelidade (OPÇÃO)
 
+OPCIONAL -
+Adicionar cartão fidelidade
+Buscar automóvel antes da lavagem
+Entregar automóvel após a lavagem
 
 
 Ultima atualização: 06/05/2022
