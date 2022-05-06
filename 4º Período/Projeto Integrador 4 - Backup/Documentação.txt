@@ -13,5 +13,7 @@ Login via conta do Google ou Facebook
 Cadastro de usuários / perfil
 Cadastro de lava jato / perfil
 Agendamento
+  . Consulta dos horários disponíveis
 Descrição para exceções
+  . Observações sobre a lavagem (Não utilizar determinado produto que seja prejudicial para o automóvel)
 Compra dos planos
