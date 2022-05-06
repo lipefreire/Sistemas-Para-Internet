@@ -31,7 +31,7 @@ DESCRIÇÃO DE ETAPAS
 06/05/2022
 Foi discutido em aula sobre o projeto para decidir as variadas funcionalidades que podem ser adicionadas ao 
 aplicativo, dentre elas, existem várias que podem ser adicionadas ou não, inclusive, na aba de "Funcionalidades do aplicativo"
-foi criado uma opção de funcionalidades opcionais que devem ser decididas se são boas ou não para o aplicativo.
+foi criado uma opção de funcionalidades opcionais que devem ser decididas se são boas ou não para o bom funcionamento do software.
 
 
 Ultima atualização: 06/05/2022
