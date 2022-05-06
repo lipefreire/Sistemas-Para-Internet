@@ -1,4 +1,4 @@
-Documentação - Projeto Integrador 4
+Documentação do projeto - Projeto Integrador 4
 Aplicativo para "Lava Jato"
 
 Componentes e funções - 
