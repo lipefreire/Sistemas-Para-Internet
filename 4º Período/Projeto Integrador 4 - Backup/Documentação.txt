@@ -4,7 +4,7 @@ Aplicativo para "Lava Jato"
 Componentes e funções - 
 Felipe Freire - Documentação
 Daniel - Layout
-Vinicius Duperron - Layout
+Vinicius - Layout
 José Rafael - Desenvolvedor Front-End
 Walter José - Desenvolvedor Back-End
 
