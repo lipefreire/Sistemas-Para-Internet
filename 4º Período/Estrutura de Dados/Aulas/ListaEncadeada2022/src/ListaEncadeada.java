@@ -81,6 +81,30 @@ public class ListaEncadeada {
 		}
 	}
 	
+	public Object pega(int posicao) {
+		return this.pegaNo(posicao).getElemento();
+	}
+	
+	public void removeDoInicio() {
+		this.inicio = this.inicio.getProximo();
+		this.totalDeElementos--;
+		
+		if(this.totalDeElementos == 0) {
+			this.fim = null;
+		}
+	}
+	
+	public void removeDoFinal() {
+		if(this.totalDeElementos == 0) {
+			System.out.println("Lista Vazia! Impossível remover.");
+		}else {
+			No anterior = this.pegaNo(this.totalDeElementos -1);
+			anterior.setProximo(null);
+			this.fim = anterior;
+			this.totalDeElementos--;
+		}
+	}
+	
 	
 	
 	

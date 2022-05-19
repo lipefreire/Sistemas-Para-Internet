@@ -17,5 +17,16 @@ public class App {
 		lista.adiciona(2, "RECIFE");
 		System.out.println(lista);
 		
+		//RETORNA O ELEMENTO DE UMA DETERMINADA POSIÇÃO
+		System.out.println("Verificando a posição 1: " + lista.pega(1));
+		
+		//REMOVENDO UM ELEMENTO DO INICIO DA LISTA
+		System.out.println("Lista atual antes da remoção: " + lista);
+		lista.removeDoInicio();
+		System.out.println(lista);
+		
+		//REMOVENDO UM ELEMENTO DO FINAL DA LISTA
+		lista.removeDoFinal();
+		System.out.println(lista);
 	}
 }
