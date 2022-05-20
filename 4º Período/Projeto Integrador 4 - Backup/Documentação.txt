@@ -1,14 +1,14 @@
 Documentação do projeto - Projeto Integrador 4
 Aplicativo para "Lava Jato"
 
-Componentes e funções - 
+COMPONENTES E FUNÇÕES - 
 Felipe Freire - Documentação
 Daniel - Layout
 Vinicius - Layout
 José Rafael - Desenvolvedor Front-End
 Walter José - Desenvolvedor Back-End
 
-Funcionalidades do aplicativo -
+FUNCIONALIDADES DO APLICATIVO -
 Login via conta do Google ou Facebook
 Cadastro de usuários / perfil pessoal
 Cadastro de lava jato / empresa
