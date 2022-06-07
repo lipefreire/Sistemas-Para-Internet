@@ -2,6 +2,9 @@ package agenda;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContatosDAO {
 	public void salvar(Contatos c) throws Exception {
@@ -45,5 +48,51 @@ public class ContatosDAO {
 		psts.setString(3, c.getDataCadastro());
 		psts.setInt(4, c.getId());
 		psts.execute();
+	}
+
+	public Contatos consultaPorId(int id)throws Exception{
+		String sql = "SELECT nome FROM contatos WHERE id = ?;";
+		
+		Connection con = Conexao.ConexaoMySQL();
+		PreparedStatement psts = con.prepareStatement(sql);
+		ResultSet rs = psts.executeQuery();
+		Contatos c = new Contatos();
+		
+		psts.setInt(1, c.getId());
+		
+		while (rs.next()) {
+			c.setId(rs.getInt("id"));
+			c.setNome(rs.getString("Nome"));
+			c.setId(rs.getInt(3));
+			c.setDataCadastro(rs.getString(4));
+		}
+		psts.execute();
+		rs.close();
+		psts.close();
+		return c;
+	}
+	
+	public List<Contatos> consultar()throws Exception{
+		String sql = "SELECT nome FROM contatos WHERE id = ?;";
+		
+		Connection con = Conexao.ConexaoMySQL();
+		PreparedStatement psts = con.prepareStatement(sql);
+		ResultSet rs = psts.executeQuery();
+		
+		Contatos c = new Contatos();
+		
+		List<Contatos> cont = new ArrayList<>();
+		
+		while (rs.next()) {
+			c.setId(rs.getInt("id"));
+			c.setNome(rs.getString("Nome"));
+			c.setId(rs.getInt(3));
+			c.setDataCadastro(rs.getString(4));
+			cont.add(c);
+		}
+		psts.execute();
+		rs.close();
+		psts.close();
+		return cont;
 	}
 }
