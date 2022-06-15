@@ -47,8 +47,28 @@ public class ListaEncadeada {
 	}
 	
 	//3ª) QUESTÃO
-	public void trocaValores(String posicao1, String posicao2) {
+	public void trocaValores(String valor1, String valor2) {
+		No atual = this.inicio;
+		int pos1 = 0, pos2 = 0;
+		for(int i = 0; i < this.totalDeElementos; i++) {
+			if(atual.getElemento().equals(valor1)) pos1 = i;
+			if(atual.getElemento().equals(valor2)) pos2 = i;
+			atual = atual.getProximo();
+		}
+		System.out.println("Posição 1: " + pos1 + "Posição 2: " + pos2);
+		No anteriorPos1 = this.pegaNo(pos1 - 1);
+		System.out.println(anteriorPos1.getElemento());
+		No NoPos1 = anteriorPos1.getProximo();
+		System.out.println(NoPos2.getelemento());
 		
+		No anteriorPos2 = this.pegaNo(pos2 - 1);
+		No NoPos2 = anteriorPos2.getProximo();
+		
+		anteriorPos1.setProximo(NoPos2);
+		NoPos2.setProximo(NoPos1.getProximo());
+		
+		anteriorPos2.setProximo(NoPos1);
+		NoPos1.setProximo(NoPos2.getProximo());
 	}
 	
 	

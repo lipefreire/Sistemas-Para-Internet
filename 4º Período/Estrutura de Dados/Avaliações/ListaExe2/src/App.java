@@ -30,13 +30,15 @@ public class App {
 		lista2.removeRepetidos();
 		System.out.println("Lista atualizada após remoção dos valores repetidos: " + lista2);
 		
-		
+		//3ª) QUESTÃO
 		ListaEncadeada lista3 = new ListaEncadeada();
-		lista3.adicionaNoInicio("SALGUEIRO");
-		lista3.adicionaNoInicio("CABROBO");
-		lista3.adicionaNoInicio("RECIFE");
-		lista3.adicionaNoInicio("PETROLINA");
+		lista3.adicionaNoInicio(8);
+		lista3.adicionaNoInicio(3);
+		lista3.adicionaNoInicio(1);
+		lista3.adicionaNoInicio(10);
+		lista3.adicionaNoInicio(2);
 		System.out.println(lista3);
+		
 		//EXECUTANDO
 		//ESCOLHE DUAS POSIÇÕES QUE QUER INVERTER (A LISTA NÃO PODE POSSUIR ELEMENTOS IGUAIS)
 		
