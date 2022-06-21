@@ -6,29 +6,32 @@ import java.sql.Date;
 @SuppressWarnings("serial")
 public class Aluno implements Serializable {
 	private int matricula;
-	private String nome, endereco, telefone;
+	private String nome, endereco, telefone, email;
 	private Date dataCadastro;
 	
 	public Aluno() {
 		
 	}
 
-	public Aluno(int matricula, String nome, String endereco, String telefone, Date dataCadastro) {
+	public Aluno(int matricula, String nome, String endereco, String telefone, String email, Date dataCadastro) {
 		super();
 		this.matricula = matricula;
 		this.nome = nome;
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.dataCadastro = dataCadastro;
+		this.email = email;
 	}
 	
-	public Aluno(String nome, String endereco, String telefone, Date dataCadastro) {
+	public Aluno(String nome, String endereco, String telefone, String email, Date dataCadastro) {
 		super();
 		this.nome = nome;
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.dataCadastro = dataCadastro;
+		this.email = email;
 	}
+	
 
 	public int getMatricula() {
 		return matricula;
@@ -74,6 +77,14 @@ public class Aluno implements Serializable {
 	public String toString() {
 		return "Aluno [matricula=" + matricula + ", nome=" + nome + ", endereco=" + endereco + ", telefone=" + telefone
 				+ ", dataCadastro=" + dataCadastro + "]";
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 }
