@@ -58,6 +58,11 @@ public class Aplicativo extends javax.swing.JFrame {
         });
 
         jButton1.setText("Salvar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -71,6 +76,11 @@ public class Aplicativo extends javax.swing.JFrame {
         });
 
         jButton2.setText("Atualizar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -80,6 +90,11 @@ public class Aplicativo extends javax.swing.JFrame {
         jLabel5.setText("AAAA-MM-DD");
 
         jButton3.setText("Excluir");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -104,27 +119,26 @@ public class Aplicativo extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(54, 54, 54)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel3))
+                            .addGap(47, 47, 47))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel4)
+                            .addGap(18, 18, 18)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(54, 54, 54)
                         .addComponent(jLabel1)
-                        .addGap(69, 69, 69)
-                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(54, 54, 54)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addGap(47, 47, 47))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(67, 67, 67)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDataCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(90, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -206,17 +220,60 @@ public class Aplicativo extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
     }//GEN-LAST:event_jButton4ActionPerformed
-
+    
+    //BOTÃO DE CONSULTAR
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         ContatosDAO contatosDAO = new ContatosDAO();
-        try{
+        try {
             txtId.setText(String.valueOf(contatosDAO.consultarPorId(Integer.parseInt(txtId.getText())).getId()));
-            txtNome.setText(contatosDAO.consultarPorId(1).getNome());
-        }
-        catch(Exception ex){
+            txtNome.setText(contatosDAO.consultarPorId(Integer.parseInt(txtId.getText())).getNome());
+            txtIdade.setText(String.valueOf(contatosDAO.consultarPorId(Integer.parseInt(txtId.getText())).getIdade()));
+            txtDataCadastro.setText(contatosDAO.consultarPorId(Integer.parseInt(txtId.getText())).getDataCadastro());
+        } catch (Exception ex) {
             Logger.getLogger(Aplicativo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton4MouseClicked
+    
+    //BOTÃO DE SALVAR
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        ContatosDAO contatosDAO = new ContatosDAO();
+        Contatos contatos = new Contatos();
+        contatos.setNome(txtNome.getText());
+        contatos.setIdade(Integer.parseInt(txtIdade.getText()));
+        contatos.setDataCadastro(txtDataCadastro.getText());
+        try {
+            contatosDAO.salvar(contatos);
+        } catch (Exception ex) {
+            Logger.getLogger(Aplicativo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    //BOTÃO DE ATUALIZAR
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        ContatosDAO contatosDAO = new ContatosDAO();
+        Contatos contatos = new Contatos();
+        contatos.setId(Integer.parseInt(txtId.getText()));
+        contatos.setNome(txtNome.getText());
+        contatos.setIdade(Integer.parseInt(txtIdade.getText()));
+        contatos.setDataCadastro(txtDataCadastro.getText());
+        try {
+            contatosDAO.atualizar(contatos);
+        } catch (Exception ex) {
+            Logger.getLogger(Aplicativo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
+    
+    //BOTÃO DE EXCLUIR
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        ContatosDAO contatosDAO = new ContatosDAO();
+        Contatos contatos = new Contatos();
+        contatos.setId(Integer.parseInt(txtId.getText()));
+        try {
+            contatosDAO.excluir(contatos);
+        } catch (Exception ex) {
+            Logger.getLogger(Aplicativo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments
