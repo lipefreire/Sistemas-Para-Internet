@@ -97,7 +97,7 @@ public class Arvore {
 	}
 	
 	// MÍNIMO
-	public Object minimo() {
+	public No minimo() {
 		if(isEmpty()) {
 			return null;
 		}
@@ -105,11 +105,11 @@ public class Arvore {
 		while(atual.getEsq() != null) {
 			atual = atual.getEsq();
 		}
-		return atual.getElemento();
+		return atual;
 	}
 	
 	// MÁXIMO
-	public Object maximo() {
+	public No maximo() {
 		if(isEmpty()) {
 			return null;
 		}
@@ -117,7 +117,7 @@ public class Arvore {
 		while(atual.getDir() != null) {
 			atual = atual.getDir();
 		}
-		return atual.getElemento();
+		return atual;
 	}
 	
 }
