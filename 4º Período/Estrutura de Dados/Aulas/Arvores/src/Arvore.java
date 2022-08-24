@@ -96,4 +96,28 @@ public class Arvore {
 		return this.raiz == null;
 	}
 	
+	// MÍNIMO
+	public Object minimo() {
+		if(isEmpty()) {
+			return null;
+		}
+		No atual = this.raiz;
+		while(atual.getEsq() != null) {
+			atual = atual.getEsq();
+		}
+		return atual.getElemento();
+	}
+	
+	// MÁXIMO
+	public Object maximo() {
+		if(isEmpty()) {
+			return null;
+		}
+		No atual = this.raiz;
+		while(atual.getDir() != null) {
+			atual = atual.getDir();
+		}
+		return atual.getElemento();
+	}
+	
 }

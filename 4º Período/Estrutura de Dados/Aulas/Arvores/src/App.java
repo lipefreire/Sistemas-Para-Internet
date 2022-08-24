@@ -14,6 +14,9 @@ public class App {
 			System.out.println("Elemento encontrado? " + arvore.busca(3).getElemento());
 			System.out.println("Pai: " + arvore.busca(3).getPai().getElemento());
 		}
+		
+		System.out.println("Mínimo: " + arvore.minimo());
+		System.out.println("Máximo: " + arvore.maximo());
 	}
 
 }
